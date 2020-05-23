@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Check code meets quality standards
       id: code-inspector
-      uses: codeinspectorio/github-action@v1
+      uses: codeinspectorio/github-action@master
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         min-quality-grade: 'WARNING'
