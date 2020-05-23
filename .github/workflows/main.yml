@@ -1,0 +1,20 @@
+on: [push]
+
+jobs:
+  check-quality:
+    runs-on: ubuntu-latest
+    name: A job to check my code quality
+    steps:
+    - name: Check code meets quality standards
+      id: code-inspector
+      uses: codeinspectorio/github-action@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        min-quality-grade: 'WARNING'
+        min-quality-score: '50'
+	max-defects-rate: '0.0001'
+	max-complex-functions-rate: '0.0001'
+	max-long-functions-rate: '0.0001'
+	project-name: ''
+	max-timeout-sec: '600'
+
