@@ -10,10 +10,8 @@ jobs:
       uses: codeinspectorio/github-action@master
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        ci-access-key: ${{ secrets.CODE_INSPECTOR_ACCESS_KEY }}
-        ci-secret-key: ${{ secrets.CODE_INSPECTOR_SECRET_KEY }}
-        access-key: ${{ secrets.CODE_INSPECTOR_ACCESS_KEY }}
-        secret-key: ${{ secrets.CODE_INSPECTOR_SECRET_KEY }}
+        code-inspector-access-key: ${{ secrets.CODE_INSPECTOR_ACCESS_KEY }}
+        code-inspector-secret-key: ${{ secrets.CODE_INSPECTOR_SECRET_KEY }}
         min-quality-grade: 'WARNING'
         min-quality-score: '50'
         max-defects-rate: '0.0001'
